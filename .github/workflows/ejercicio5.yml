@@ -20,7 +20,8 @@ jobs:
 
       - id: create-timestamp
         name: Crear timestamp
-        run: echo "timestamp=$(date +%s)" >> $GITHUB_OUTPUT
+        run: |
+          echo "timestamp=$(date +%s)" >> $GITHUB_OUTPUT
 
   test:
     needs: setup
