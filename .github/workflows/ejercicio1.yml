@@ -2,12 +2,12 @@ name: Ejercicio 1
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   hello:
     runs-on: ubuntu-latest
-
     steps:
       - name: Step 1 - Saludo
         run: echo "Hola, mi nombre es Elmer Dario Izaguirre"
@@ -16,4 +16,4 @@ jobs:
         run: date
 
       - name: Step 3 - Sistema operativo del runner
-        run: echo "Sistema operativo: $RUNNER_OS"
+        run: echo "Sistema operativo:$RUNNER_OS"
